@@ -26,11 +26,19 @@ brew bundle
 
 パッケージ管理ファイル。以下をまとめてインストール：
 
-- **Formulae**: gh, lazygit, nodebrew, pyenv, tcl-tk, yarn
-- **Casks**: Android Studio, Docker Desktop, Ghostty, Google Chrome, IntelliJ IDEA CE, LINE, Notion, Raycast, Run Cat, Slack, Typora, Visual Studio Code, Warp
+- **Formulae**: git, gh, lazygit, nodebrew, pnpm, pyenv, yarn
+- **Casks**: Android Studio, Docker Desktop, Ghostty, Google Chrome, IntelliJ IDEA CE, LINE, Notion, Postman, Raycast, Run Cat, Slack, Typora, Visual Studio Code, Warp, Hack Nerd Font
 - **VS Code Extensions**: Dart, Flutter, ESLint, GitLens, Prettier等
 
-### Configuration
+## 定期メンテ
+
+```zsh
+brew update
+brew upgrade
+brew cleanup
+```
+
+## Configuration
 
 - **ghostty/config**: Ghostty設定
 - **zsh/**: Zsh設定
