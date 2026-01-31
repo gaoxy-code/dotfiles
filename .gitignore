@@ -1,0 +1,32 @@
+# Editor / IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# Vim
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+
+# Build
+dist/
+build/

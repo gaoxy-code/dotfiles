@@ -1,0 +1,10 @@
+# ----- テーマ -----
+theme = Kanagawa Dragon
+
+# ----- UI -----
+font-size = 12
+background-opacity = 0.75
+adjust-cell-height = 10%
+
+# ----- UX -----
+mouse-hide-while-typing = true 

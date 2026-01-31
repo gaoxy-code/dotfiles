@@ -1,0 +1,8 @@
+[alias]
+  ci = commit
+  st = status
+  br = branch
+  co = checkout
+  sw = switch
+[push]
+  autoSetupRemote = true

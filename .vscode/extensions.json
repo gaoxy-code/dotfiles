@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    // GitHub
+    "github.copilot",
+    "github.copilot-chat",
+    "github.github-vscode-theme",
+    "github.vscode-github-actions",
+    // Icon
+    "vscode-icons-team.vscode-icons",
+    // Formatter
+    "esbenp.prettier-vscode",
+    // Linter
+    "dbaeumer.vscode-eslint",
+    // Git
+    "eamodio.gitlens",
+    "mhutchie.git-graph"
+  ]
+}
