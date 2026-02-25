@@ -1,0 +1,29 @@
+# ----- Appearance -----
+theme = Kanagawa Dragon
+font-size = 12
+cursor-style = block
+mouse-hide-while-typing = true 
+background-opacity = 0.75
+adjust-cell-height = 10%
+window-colorspace = "display-p3"
+
+# ----- Pane navigation -----
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+l=goto_split:right
+
+# ----- Pane splitting -----
+keybind = ctrl+shift+v=new_split:right
+keybind = ctrl+shift+h=new_split:down
+
+
+# ----- Resize panes -----
+keybind = ctrl+comma=resize_split:left,10
+keybind = ctrl+period=resize_split:right,10
+keybind = ctrl+semicolon=resize_split:down,10
+keybind = ctrl+apostrophe=resize_split:up,10
+
+# ----- scroll up/down -----
+keybind = ctrl+shift+k=scroll_page_lines:-3
+keybind = ctrl+shift+j=scroll_page_lines:3

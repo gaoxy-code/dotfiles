@@ -1,14 +1,13 @@
-# PATH
-eval $(/opt/homebrew/bin/brew shellenv)
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+# starship
+eval "$(starship init zsh)"
+
+# autosugestions
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#### fast syntax highlighting
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Zsh Completion
 autoload -Uz compinit && compinit -C
-
-# Options
-setopt HIST_IGNORE_DUPS
-setopt AUTO_CD
-setopt CORRECT_ALL
 
 # Alias
 alias typora="open -a Typora"
