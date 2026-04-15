@@ -3,11 +3,6 @@
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
-!.vscode/launch.json
-
-# Vim
-*.swp
-*.swo
 
 # macOS
 .DS_Store

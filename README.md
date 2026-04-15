@@ -4,20 +4,34 @@
 
 ## Install
 
-### Xcode Command Line Tools
+### 1. Xcode Command Line Tools
 
 ```zsh
 xcode-select --install
 ```
 
-### Homebrew
+### 2. Homebrew
 
 ```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+### 3. セットアップ実行
+
 ```zsh
-brew bundle
+./setup.sh
+```
+
+Homebrew パッケージのインストールと、設定ファイルのシンボリックリンク作成を自動で行います。
+
+**トラブルシューティング**
+
+既存ファイルがある場合、スクリプトは処理をスキップします。既存ファイルをバックアップしてから実行してください。
+
+```zsh
+# 例: 既存の .zshrc をバックアップ
+mv ~/.zshrc ~/.zshrc.bak
+./setup.sh
 ```
 
 ## Contents
@@ -26,8 +40,8 @@ brew bundle
 
 パッケージ管理ファイル。以下をまとめてインストール：
 
-- **Formulae**: git, gh, lazygit, nodebrew, pnpm, pyenv, yarn, starship, zsh-autosuggestions, zsh-syntax-highlightling
-- **Casks**: Android Studio, Docker, Ghostty, Google Chrome, IntelliJ IDEA CE, LINE, Notion, Raycast, Run Cat, Postman, Slack, Typora, Visual Studio Code, Warp, Hack Nerd Font
+- **Formulae**: git, gh, lazygit, nodebrew, pnpm, pyenv, yarn, starship, zsh-autosuggestions, zsh-syntax-highlighting
+- **Casks**: Android Studio, Ghostty, Google Chrome, IntelliJ IDEA CE, Notion, Raycast, Postman, Typora, Visual Studio Code, Warp, Hack Nerd Font
 - **VS Code Extensions**: GitHub Copilot, GitHub Copilot Chat, GitHub Theme, GitHub Actions, VS Code Icons, Prettier, ESLint, GitLens, Git Graph
 
 ## 定期メンテ
@@ -40,5 +54,15 @@ brew cleanup
 
 ## Configuration
 
-- **ghostty/config**: Ghostty設定
-- **zsh/**: Zsh設定
+`setup.sh` を実行することで、以下のファイルがホームディレクトリの対応するパスにシンボリックリンクで配置されます。
+
+| リポジトリ                      | ホームディレクトリ             |
+| ------------------------------- | ------------------------------ |
+| `.config/git/config`            | `~/.config/git/config`         |
+| `.config/git/ignore`            | `~/.config/git/ignore`         |
+| `.config/ghostty/config`        | `~/.config/ghostty/config`     |
+| `.config/lazygit/config.yml`    | `~/.config/lazygit/config.yml` |
+| `.config/starship.toml`         | `~/.config/starship.toml`      |
+| `.config/zsh/.zshrc`            | `~/.zshrc`                     |
+| `.config/.claude/CLAUDE.md`     | `~/.claude/CLAUDE.md`          |
+| `.config/.claude/settings.json` | `~/.claude/settings.json`      |

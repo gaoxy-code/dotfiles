@@ -1,8 +1,6 @@
 {
   "recommendations": [
     // GitHub
-    "github.copilot",
-    "github.copilot-chat",
     "github.github-vscode-theme",
     "github.vscode-github-actions",
     // Icon
