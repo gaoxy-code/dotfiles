@@ -1,6 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CLAUDE_CODE_LANG": "ja"
+  },
   "permissions": {
+    "allow": [
+      "mcp__pencil"
+    ],
     "deny": [
       "Bash(rm -rf *)",
       "Bash(git push --force *)",
@@ -22,14 +28,9 @@
       "Read(**/*.key)",
       "Read(**/id_rsa*)",
       "Read(**/id_ed25519*)"
-    ],
-    "allow": [
-      "mcp__pencil"
     ]
   },
-  "env": {
-    "CLAUDE_CODE_LANG": "ja"
-  },
+  "model": "opus",
   "hooks": {
     "Notification": [
       {
@@ -43,11 +44,13 @@
       }
     ]
   },
-  "enabledPlugins": {
-    "skill-creator@claude-plugins-official": true
-  },
   "statusLine": {
     "type": "command",
     "command": "npx ccstatusline@latest"
-  }
+  },
+  "enabledPlugins": {
+    "skill-creator@claude-plugins-official": true
+  },
+  "effortLevel": "xhigh",
+  "theme": "dark-ansi"
 }
