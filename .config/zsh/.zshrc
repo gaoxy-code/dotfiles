@@ -9,6 +9,12 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Zsh Completion
 autoload -Uz compinit && compinit -C
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zoxide
+eval "$(zoxide init zsh)"
+
 # Alias
 alias typora="open -a Typora"
 alias ghostty="open -a Ghostty"

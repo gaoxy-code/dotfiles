@@ -66,3 +66,41 @@ brew cleanup
 | `.config/zsh/.zshrc`            | `~/.zshrc`                     |
 | `.config/.claude/CLAUDE.md`     | `~/.claude/CLAUDE.md`          |
 | `.config/.claude/settings.json` | `~/.claude/settings.json`      |
+
+## Git 管理しないファイルを dotfiles で管理する
+
+`.netrc` のように認証情報を含むファイルは Git にコミットしたくないが、dotfiles ディレクトリで一元管理したい場合の手順。
+
+### 手順
+
+1. **dotfiles 配下にファイルを作成**
+
+   ```zsh
+   touch ~/works/dev/dotfiles/.netrc
+   chmod 600 ~/works/dev/dotfiles/.netrc  # 機密ファイルは権限を絞る
+   ```
+
+2. **`.gitignore` に追加**
+
+   リポジトリにコミットされないように `.gitignore` へ追記する。
+
+   ```
+   # Secrets
+   .netrc
+   ```
+
+3. **ホームディレクトリにシンボリックリンクを作成**
+
+   ```zsh
+   ln -s ~/works/dev/dotfiles/.netrc ~/.netrc
+   ```
+
+4. **`setup.sh` への追記は不要**
+
+   Git 管理しないファイルは他マシンに clone しても存在しないため、`setup.sh` には追加しない。新しいマシンでセットアップする際は手動で 1〜3 を再実行する。
+
+### 現在 Git 管理外で扱っているファイル
+
+| リポジトリ | ホームディレクトリ | 用途           |
+| ---------- | ------------------ | -------------- |
+| `.netrc`   | `~/.netrc`         | API 認証情報等 |

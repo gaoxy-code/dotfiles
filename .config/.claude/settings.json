@@ -5,7 +5,13 @@
   },
   "permissions": {
     "allow": [
-      "mcp__pencil"
+      "mcp__pencil",
+      "Bash(pnpm check *)",
+      "Bash(pnpm lint *)",
+      "Bash(pnpm test *)",
+      "Bash(awk *)",
+      "Bash(jq *)",
+      "Bash(xargs *)"
     ],
     "deny": [
       "Bash(rm -rf *)",

@@ -37,3 +37,8 @@ keybind = ctrl+apostrophe=resize_split:up,10
 # -----------------------------------------
 keybind = ctrl+shift+k=scroll_page_lines:-3
 keybind = ctrl+shift+j=scroll_page_lines:3
+
+# -----------------------------------------
+# OS 
+# -----------------------------------------
+macos-option-as-alt = left

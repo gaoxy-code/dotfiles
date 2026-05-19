@@ -16,6 +16,9 @@
 .env.local
 .env.*.local
 
+# Secrets
+.netrc
+
 # Logs
 *.log
 
